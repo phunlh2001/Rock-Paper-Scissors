@@ -10,6 +10,7 @@ const btns = document.querySelectorAll(".btn-choice");
 let userChoice;
 let computerChoice;
 let result;
+
 let userImg = document.createElement("img");
 let computerImg = document.createElement("img");
 userImg.className = "imgChoice";
@@ -58,35 +59,35 @@ function generateComputerChoice() {
 
 function getResult() {
   if (userChoice === computerChoice) {
-    result = "Draw!";
+    result = "It's a Draw!";
   }
   if (userChoice === "Rock" && computerChoice === "Paper") {
-    result = "You lose!";
+    result = "You Lose!";
   }
   if (userChoice === "Rock" && computerChoice === "Scissors") {
-    result = "You won!";
+    result = "You Won!";
   }
   if (userChoice === "Paper" && computerChoice === "Rock") {
-    result = "You won!";
+    result = "You Won!";
   }
   if (userChoice === "Paper" && computerChoice === "Scissors") {
-    result = "You lose!";
+    result = "You Lose!";
   }
   if (userChoice === "Scissors" && computerChoice === "Paper") {
-    result = "You won!";
+    result = "You Won!";
   }
   if (userChoice === "Scissors" && computerChoice === "Rock") {
-    result = "You lose!";
+    result = "You Lose!";
   }
   resultDisplay.innerHTML = result;
 }
 
 let count = 0;
 function getScore() {
-  if (result === "You won!") {
+  if (result === "You Won!") {
     count++;
   }
-  if (result === "You lose!") {
+  if (result === "You Lose!") {
     count--;
   }
   if (count <= 0) count = 0;
